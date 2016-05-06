@@ -1,10 +1,10 @@
-targets = latice2016.pdf
+targets = issep2016.pdf
 
 all: $(targets)
 
 pdflatex = pdflatex -interaction=errorstopmode -halt-on-error
 
-%.pdf: %.tex latice2016.bib
+%.pdf: %.tex issep2016.bib
 	$(pdflatex) $<
 	bibtex $*
 	$(pdflatex) $<

@@ -1,2 +1,2 @@
-# LaTiCE2016
-Paper for 4th International Conference on Learning and Teaching in Computing and Engineering (LaTiCE 2016)
+# ISSEP 2016
+Paper for 9th International Conference on Informatics in Schools (ISSEP 2016)
