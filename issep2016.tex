@@ -1,5 +1,6 @@
-\documentclass[conference]{IEEEtran}
-
+\documentclass{llncs}
+%
+\usepackage{makeidx}  % allows for indexgeneration
 \usepackage[british]{babel}
 \usepackage{graphicx}
 \usepackage{paralist}
@@ -13,51 +14,43 @@
 %\hyphenation{op-tical net-works semi-conduc-tor}
 
 
+\title{A National Engagement Model for Developing
+  Computer Science Education in Wales}
+
+\author{Tom Crick\inst{1} \and Faron Moller\inst{2}}
+
+\institute{Department of Computing \& Information Systems\\Cardiff Metropolitan University, UK\\
+\email{tcrick@cardiffmet.ac.uk}
+\and
+Department of Computer Science, Swansea University, UK\\
+\email{f.g.moller@swansea.ac.uk}
+}
+
+\raggedbottom
 \begin{document}
 %
-% paper title
-\title{Technocamps and Wales: A National \\ 
-       Engagement Model for Computing Education}
+\frontmatter          % for the preliminaries
+%
+\pagestyle{headings}  % switches on printing of running heads
+%\addtocmark{} % additional mark in the TOC
 
-
-% author names and affiliations
-% use a multiple column layout for up to three different
-% affiliations
-% \author{\IEEEauthorblockN{Tom Crick}
-% \IEEEauthorblockA{Department of Computing \& Information Systems\\
-% Cardiff Metropolitan University, UK\\
-% {\url{tcrick@cardiffmet.ac.uk}}}
-% \and
-% \IEEEauthorblockN{Faron Moller}
-% \IEEEauthorblockA{Department of Computer Science\\
-% Swansea University, UK\\
-% {\url{f.g.moller@swansea.ac.uk}}}}
-
-% conference papers do not typically use \thanks and this command
-% is locked out in conference mode. If really needed, such as for
-% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
-% after \documentclass
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-
-% make the title area
 \maketitle
 
 \begin{abstract}
 Computer science education in the United Kingdom has undergone
 substantial scrutiny, and in England a new computing curriculum has
-just been introduced.  However, in Wales -- a devolved nation within
-the UK -- political, geographical and socio-technical issues hinder
-any substantive educational policy or curriculum reform for computer
-science.  In this paper we outline the impact of Technocamps, a
-university-based schools outreach programme founded in 2003, as well
-as framing the wider opportunity for embedding digital competencies
-and computing education at the heart of substantive curriculum reforms
-as a prospective case study for countries with aspirations of becoming
-digitally confident and capable nations.
+just been introduced. However, in Wales -- a devolved nation within
+the UK -- political, geographical and socio-technical issues have
+hindered any substantive educational policy or curriculum reform for
+computer science over the past ten years. In this paper we present the
+activities of Technocamps, a university-based schools outreach
+programme founded in 2003 and its wider impact on education in
+Wales. Furthermore, with imminent curriculum reform in Wales, we frame
+the wider opportunity for embedding sustainable digital competencies
+and computing education -- as well as changing the wider public
+perception and importance of computer science -- as a prospective case
+study for countries with aspirations of becoming digitally confident
+and capable nations.
 \end{abstract}
 
 
@@ -75,8 +68,7 @@ unless you were able to program -- saw a large proportion
 of school children learning the fundamentals of programming in a
 curriculum which included a variety of complementary topics such as
 hardware, software, Boolean logic and binary number
-representation.
-% ~\cite{Doyle:1988}
+representation~\cite{Doyle:1988}.
 
 % In the early 1980s, the BBC Micro was introduced to schools throughout
 % the UK as part of the BBC's \emph{Computer Literacy Project}; before
@@ -100,8 +92,7 @@ the priority. However, as interest in viewing the computer as a
 creative tool waned in favour of using it for more mundane tasks,
 various problems were being created, which were highlighted in two
 independent enquiries in 1997: the McKinsey
-Report %~\cite{McKinsey:1997}
-and the Stevenson Report. %~\cite{Stevenson:1997}
+Report~\cite{McKinsey:1997} and the Stevenson Report~\cite{Stevenson:1997}.
 Both reports concluded that Information
 Technology in UK schools was in a primitive state and in need of
 attention and major investment. In line with the Stevenson Report,
@@ -110,30 +101,27 @@ that same report: {\emph{Information and Communications Technology}}
 (ICT).  Over the decade starting in 1997, the UK Government invested
 over \pounds3.5bn in ICT in schools through various initiatives
 such as the National Grid for Learning and the New
-Opportunities Fund. %~\cite{Doughty:2006}.
+Opportunities Fund~\cite{Doughty:2006}.
 
 By 2000, ICT had permeated both primary and secondary school
-curricula. The emphasis was
-on developing the children's IT skills and digital literacy in an
-honest attempt to address the increasing need for digital competencies
-amongst the general public.  However, despite enormous
-government-funded ICT initiatives, various reports throughout the
-decade identified problems with implementing government policy on ICT
-educational reform.
-%~\cite{OpieFukuyo:2000,Ofsted:2001,Ofsted:2002,Ofsted:2004,Loveless:2005}.
-Younie~\cite{Younie:2006} summarises the problems
-identified by these reports into five key areas, three being
-management and the other two being: teacher training and competence;
-and impact on pedagogy.  The ICT curriculum in
-Wales, %~\cite{welshictcurric:2008},
-while generally viewed to be more
-flexible and less prescriptive than the equivalent subject in England,
-exhibited many of the same
-issues. %~\cite{estynict:2007,estynict:2013,estynict:2014}.
-A full two-thirds of ICT teachers in the UK do not have a relevant
+curricula. The emphasis was on developing the children's IT skills and
+digital literacy in an honest attempt to address the increasing need
+for digital competencies amongst the general public.  However, despite
+enormous government-funded ICT initiatives, various reports throughout
+the decade identified problems with implementing government policy on
+ICT educational
+reform~\cite{OpieFukuyo:2000,Ofsted:2001,Ofsted:2002,Ofsted:2004,Loveless:2005}.
+Younie~\cite{Younie:2006} summarises the problems identified by these
+reports into five key areas, three being management and the other two
+being: teacher training and competence; and impact on pedagogy.  The
+ICT curriculum in Wales~\cite{welshictcurric:2008}, while generally
+viewed to be more flexible and less prescriptive than the equivalent
+subject in England, exhibited many of the same
+issues~\cite{estynict:2007,estynict:2013,estynict:2014}.  A full
+two-thirds of ICT teachers in the UK do not have a relevant
 qualification but may have moved into the role of ICT teacher simply
-by being sufficiently digitally literate. %~\cite{RoyalSoc:2012}.
-The situation is worse in Wales, where this figure rises to
+by being sufficiently digitally literate~\cite{RoyalSoc:2012}.  The
+situation is worse in Wales, where this figure rises to
 75\%~\cite{GTCW:2008}, with ICT perceived to be a low-priority
 discipline in schools. Applications to study computer science at
 university slumped in the early part of the millennium -- especially
@@ -148,18 +136,19 @@ the UK's premier science academy, made the very same observations.
 The report noted that ICT suffers from a poor reputation amongst
 pupils, parents and industry, who consider it dull and unchallenging
 and hence a low-value discipline, especially compared to other
-strategically-significant STEM subjects.  With ICT embedded across the
-primary school curriculum, secondary school pupils find ICT in
-secondary school neither stimulating nor engaging. The Wolf
+strategically-significant STEM subjects. With ICT embedded across the
+primary school curriculum, secondary school pupils found ICT in
+secondary school neither stimulating nor
+engaging~\cite{sentance-et-al-wipsce2012}. The Wolf
 Report~\cite{Wolf:2011} further notes that the undemanding nature of
-ICT qualifications in secondary schools is readily exploited by schools:
-due to a high league table weighting associated with
+ICT qualifications in secondary schools is readily exploited by
+schools: due to a high league table weighting associated with
 vocational qualifications, easily-achieved high results in ICT offer a
 welcome boost to a school's league table position. Furthermore, as ICT
 is typically presented by schools as their ``computing'' offering,
 students who might otherwise enjoy studying computer science are
-actively put off from what they are wrongly but innocently
-led to believe is computer
+actively put off from what they are wrongly but innocently led to
+believe is computer
 science~\cite{crick+sentance:2011,brown-et-al-sigcse2012}.
 
 % Fast forward 30 years and the situation is very much different. The
@@ -357,18 +346,17 @@ from the OECD~\cite{oecdwales:2014}.
 % \item tackling deprivation.
 % \end{itemize}
 
-Whilst broadly maintaining the general educational system
-used in England, the Welsh
-Government embarked on a 10-year revolutionary plan including
-%phasing out national Standard Attainment Tests (SATs),
+Whilst broadly maintaining the general educational system used in
+England, the Welsh Government embarked on a 10-year revolutionary plan
+including %phasing out national Standard Attainment Tests (SATs),
 introducing the Welsh
-Baccalaureate %\footnote{\url{http://www.welshbaccalaureate.org.uk/}}
+Baccalaureate\footnote{\url{http://www.welshbaccalaureate.org.uk/}}
 (an overarching qualification, with a purely practical-based
-assessment, incorporating key skills) as well as explicitly
-using education as a lever to tackle socio-economic deprivation.
-Much of this plan was lauded, being learner-focused, placing an
-emphasis on skills development and ensuring that it is appropriate for
-the specific needs of Wales. However, since its implementation, it has
+assessment, incorporating key skills) as well as explicitly using
+education as a lever to tackle socio-economic deprivation.  Much of
+this plan was lauded, being learner-focused, placing an emphasis on
+skills development and ensuring that it is appropriate for the
+specific needs of Wales. However, since its implementation, it has
 been criticised for various reasons and by various stakeholders.  The
 then Minister for Education and Skills appointed in June 2010, in
 looking for the causes of Wales' failing education system, found cause
@@ -389,12 +377,13 @@ between Wales and England has steadily grown by about 1\% per year.
 %pupil in England than in Wales (\pounds7,533 per pupil in England as
 %opposed to \pounds6,676 per pupil in Wales)~\cite{Evans:2015}.
 
-%As reported by Hubweiser et al.~\cite{hubwieser-et-al:2011}, when
-%establishing a model for viewing school computer science education, it
-%is apparent that there is much diversity between school education
-%systems, and this can create an obstacle when trying to understand
-%progress made in a different country; this is particularly pertinent
-%to the devolved educational systems of the UK.
+As reported by Hubweiser et al.~\cite{hubwieser-et-al:2011}, when
+establishing a model for viewing school computer science education, it
+is apparent that there is substantial diversity between school
+education systems, and this can create an obstacle when trying to
+understand progress made in a different country; this is particularly
+pertinent to the devolved (and diverging) educational systems of the
+UK.
 
 %\section{Technocamps}\label{technocamps}
 
@@ -993,20 +982,19 @@ the future of computer science and ICT in schools in Wales.
 % of a Ministerial announcement and seminar in November 2012.
 %The key themes derived from the seminar,
 % alongside wider policy developments, provided
-Its remit was to explore the issues that: ICT in
-schools needed to be re-branded, re-engineered and made relevant to now
-and to the future; computer science should be introduced at primary
-school and developed over the course of the curriculum so that
-learners can progress into a career pathway in the sector; skills,
-such as creative problem-solving, should be explicitly reflected in
-the curriculum; with revised qualifications to be developed in
-partnership with schools, higher education and industry. 
-It was initially envisaged to report back in Autumn 2013, with
-its recommendations informing the wider review of assessment and 14-19
-qualifications %~\cite{wgrev14-19:2014},
-with any necessary changes
-being considered as part of any revisions to the National Curriculum.
-%in Wales.
+Its remit was to explore the issues that: ICT in schools needed to be
+re-branded, re-engineered and made relevant to now and to the future;
+computer science should be introduced at primary school and developed
+over the course of the curriculum so that learners can progress into a
+career pathway in the sector; skills, such as creative
+problem-solving, should be explicitly reflected in the curriculum;
+with revised qualifications to be developed in partnership with
+schools, higher education and industry.  It was initially envisaged to
+report back in Autumn 2013, with its recommendations informing the
+wider review of assessment and 14-19
+qualifications~\cite{wgrev14-19:2014}, with any necessary changes
+being considered as part of any revisions to the National Curriculum
+in Wales.
 
 % The membership of the ICT Steering Group was comprised of representatives
 % from a cross-section of key stakeholders, tasked with providing clear
@@ -1117,13 +1105,12 @@ the specificity of the educational challenges in Wales, as well as
 providing a broad and balanced curriculum, from digital competencies
 through to computer science. However, the recommendations were
 non-binding and an official response from the Welsh Government was
-only published in March 2014. %~\cite{wgictresponse:2014}.
-While aspects
+only published in March 2014~\cite{wgictresponse:2014}. While aspects
 of the recommendations around digital competencies had been accepted,
 everything relating to curriculum and qualifications was preempted by
 the announcement in March 2014 of a independent review to provide
 recommendations to inform the development of a new Curriculum for
-Wales. 
+Wales.
 
 % The report of the ICT Steering Group formed an important part
 % of the evidence base for this review going forward.
@@ -1133,38 +1120,37 @@ Wales.
 In March 2014, Professor Graham Donaldson, a former chief school
 inspector in Scotland, was appointed by the Welsh Government to
 conduct an independent review of curriculum and assessment %arrangements
-of the entire curriculum in Wales.  This continued on
+of the entire curriculum in Wales. This continued on
 from a number of previous national consultations and reviews, such as
-the 2011-2012 Review of Qualifications %~\cite{wgrev14-19:2014}
+the 2011-2012 Review of Qualifications~\cite{wgrev14-19:2014}
 for 14- to 19-year-olds in Wales (which aimed to ensure that qualifications
 in Wales are understood and valued and meet the needs of young people and
 the Welsh economy), as well as aggregating a number of independent
-subject-specific reviews. %, including the 2013 ICT review.
+subject-specific reviews, including the 2013 ICT review.
 
 % (\emph{``Successful Futures''})
-The Donaldson report~\cite{Donaldson:2015} was published in March 2015, proposes
-profound changes to the education system in Wales. While identifying
-strengths in the current education system, for example the Foundation
-Phase and the commitment to the Welsh language and culture, the report
-identifies significant shortcomings of the current curriculum
-arrangements, which essentially remain as devised in 1988 (when it
-shared a national curriculum with England). The report argues that the
-curriculum has become overloaded, complicated and, in many parts,
-outdated. It identifies four purposes for the curriculum, recommending
-that the entirety of the school curriculum should be designed to help
-all children and young people to become: ambitious, capable learners,
-ready to learn throughout their lives; enterprising, creative
-contributors, ready to play a full part in life and work; ethical,
-informed citizens of Wales and the world; and healthy, confident
-individuals, ready to lead fulfilling lives as valued members of
-society. There are a number of similarities to the Scottish
-{\emph{Curriculum for Excellence}}
-model, %\footnote{\url{http://www.educationscotland.gov.uk/learningandteaching/thecurriculum/}}
+The Donaldson report~\cite{Donaldson:2015} was published in March
+2015, proposes profound changes to the education system in
+Wales. While identifying strengths in the current education system,
+for example the Foundation Phase and the commitment to the Welsh
+language and culture, the report identifies significant shortcomings
+of the current curriculum arrangements, which essentially remain as
+devised in 1988 (when it shared a national curriculum with
+England). The report argues that the curriculum has become overloaded,
+complicated and, in many parts, outdated. It identifies four purposes
+for the curriculum, recommending that the entirety of the school
+curriculum should be designed to help all children and young people to
+become: ambitious, capable learners, ready to learn throughout their
+lives; enterprising, creative contributors, ready to play a full part
+in life and work; ethical, informed citizens of Wales and the world;
+and healthy, confident individuals, ready to lead fulfilling lives as
+valued members of society. There are a number of similarities to the
+Scottish {\emph{Curriculum for Excellence}}
+model\footnote{\url{http://www.educationscotland.gov.uk/learningandteaching/thecurriculum/}},
 of which Donaldson was also involved.
 
-With respect to computing education and
-the role of technology, the review identifies three cross-cutting,
-whole-schools ``collective
+With respect to computing education and the role of technology, the
+review identifies three cross-cutting, whole-schools ``collective
 responsibilities'': literacy, numeracy and digital competencies. With
 the structure of Foundation and Key Stages disappearing, individual
 curriculum subjects would be replaced with six ``areas of learning'',
@@ -1210,20 +1196,19 @@ remaining to be seen in implementation, resourcing and timescales.
 
 The publication of the Donaldson curriculum review was quickly
 followed by a review of initial teacher education in March 2015, led
-by Professor John Furlong. His review~\cite{Furlong:2015} notes
-that teacher training is at a ``critical turning point'' and needs
-to be changed, 
-suffering as it does from
-a vacuum in the leadership in Wales, substantial under-investment,
-and support for staffing by universities in their
-education departments and faculties falling well short of best
-practice in other parts of the UK and internationally. While not
-specifically addressing issues for individual subjects, it notes the
-rise in expectations of the proposed curriculum from the Donaldson
-review (both in subject knowledge, as well as delivery), as well as
-explicitly referring to expectations of digital competencies in the
-qualified teacher standards, as well as how best to incentivise the
-best applicants to enter the teaching profession in Wales.
+by Professor John Furlong. His review~\cite{Furlong:2015} notes that
+teacher training is at a ``critical turning point'' and needs to be
+changed, suffering as it does from a vacuum in the leadership in
+Wales, substantial under-investment, and support for staffing by
+universities in their education departments and faculties falling well
+short of best practice in other parts of the UK and
+internationally. While not specifically addressing issues for
+individual subjects, it notes the rise in expectations of the proposed
+curriculum from the Donaldson review (both in subject knowledge, as
+well as delivery), as well as explicitly referring to expectations of
+digital competencies in the qualified teacher standards, as well as
+how best to incentivise the best applicants to enter the teaching
+profession in Wales.
 % (as evidenced by the current situation for funding in
 % Wales %\footnote{\url{http://teachertrainingcymru.org/node/16}}
 % vs. England%
@@ -1350,7 +1335,7 @@ technology curricula.
 
 
 % bib
-\bibliographystyle{IEEEtran}
-\bibliography{latice2016}
+\bibliographystyle{splncs}
+\bibliography{issep2016}
 
 \end{document}
